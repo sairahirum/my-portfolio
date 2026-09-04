@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio - Sairah Irum</title>
+    <meta name="description" content="Portfolio of Sairah Irum, Frontend Web Developer & Website Maintenance Specialist showcasing core services, technical stack, and featured projects." />
+    <meta property="og:title" content="My Portfolio - Sairah Irum" />
+    <meta property="og:description" content="Portfolio of Sairah Irum, Frontend Web Developer & Website Maintenance Specialist showcasing core services, technical stack, and featured projects." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Linked CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="logo" id="navLogo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span>MyPortfolio</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn-resume" id="btnOpenResume" data-open-modal="resumeModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Resume</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <nav class="mobile-drawer" id="mobileDrawer">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <button class="btn-resume" style="width: 100%; justify-content: center; margin-top: 10px;" data-open-modal="resumeModal">
+          <span>View Resume</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                Hi, I'm Sairah Irum —<br />
+                <span class="hero-title-accent">Frontend Web Developer &amp; Website Maintenance Specialist</span>
+              </h1>
+              <p class="hero-description">
+                I build responsive, pixel-perfect websites and optimize web performance, fix layout bugs, and maintain seamless user experiences.
+              </p>
+              <div class="hero-actions">
+                <a href="#projects" class="btn-primary" id="btnHeroViewProjects">
+                  <span>View Projects</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn-outline" id="btnHeroContact">
+                  <span>Contact Me</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-avatar-wrapper">
+              <div class="hero-avatar-ring">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT3klVkkiUoTwI18YfhEk5dKpmPNhFOmpvJWvSVQ-NPgIHqFA1XQJ6HdadkYuWH4S177poJWpHDMaiU0Qma1b8fVHW38B0srY5CPpXhuat8IoI8p8PVbTTCvilE2p_ePj7g4-xDx3i3SgUouX9_QEtn4cPYXsHmO4sIYUczrQG96Dhx9wGUTr-c5nhjSD-LD94pPKF5B5fMBsz7MZflpjRq_eZZJ_qV6Oy5ZbQeqlplHxv3clTTeU"
+                  alt="sairah irum - Frontend Developer"
+                  class="hero-avatar-img"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Services Section -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Core Services</h2>
+            <div class="section-underline"></div>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <article class="service-card glow-card" id="serviceCustomFrontend">
+              <div class="service-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></polyline>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Custom Frontend</h3>
+              <p class="service-desc">Crafting semantically structured HTML5, robust CSS3 architectures, and interactive JavaScript experiences from scratch.</p>
+            </article>
+
+            <!-- Service 2 -->
+            <article class="service-card glow-card" id="serviceMaintenance">
+              <div class="service-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Maintenance &amp; Bug Fixing</h3>
+              <p class="service-desc">Diagnosing layout shifts, resolving responsive quirks, and ensuring cross-browser stability for legacy and modern sites.</p>
+            </article>
+
+            <!-- Service 3 -->
+            <article class="service-card glow-card" id="servicePerformance">
+              <div class="service-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Performance Optimization</h3>
+              <p class="service-desc">Image optimization (WEBP/SVG), asset minification, and critical rendering path improvements for lightning-fast load times.</p>
+            </article>
+
+            <!-- Service 4 -->
+            <article class="service-card glow-card" id="serviceContentUpdates">
+              <div class="service-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Content &amp; UI Updates</h3>
+              <p class="service-desc">Seamless integration of new features, form enhancements, and systematic updates to keep interfaces fresh and accessible.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Stack Section -->
+      <section class="skills-section" id="skills">
+        <div class="container">
+          <div class="skills-wrapper">
+            <h2 class="skills-title">Technical Stack</h2>
+            <div class="skills-cloud" id="skillsContainer">
+              <button class="skill-pill" title="Click to inspect proficiency and details">HTML5</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">CSS3</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">JavaScript</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">Git &amp; GitHub</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">GitHub Pages</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">VS Code</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">Chrome DevTools</button>
+              <button class="skill-pill" title="Click to inspect proficiency and details">Responsive Design</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-underline"></div>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project Card 1: DevDash App -->
+            <article class="project-card glow-card" id="projectDevDash">
+              <div class="project-image-container">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUNZCnUTSuaTdJGl9HQeFw0F5svScBXyWuxEZEA91fehCEwtcY8vxn2KSBjZdYQM6YLR8axFb-wsJQomalhfPlPMM-GI35cH2cYb_J98Qht_YBqxN-TEOrLg-q8xJCTtAbkPEAC6E9C4DKcLrqT7A8z_yp0nk12A_vMElQcoWUotgcJVWXQxvY1mxEOqHztsRbMkSUey571KlVYXn0ZUq1pG0AxWp8YwRqLbG40gfMG1icfBHlxrc"
+                  alt="DevDash App Project Preview"
+                  class="project-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">DevDash App</h3>
+                <p class="project-desc">A high-performance developer dashboard built with a component-driven architecture for robust maintainability.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Tailwind</span>
+                  <span class="project-tag">Lucide</span>
+                </div>
+                <div class="project-links">
+                  <a href="#live-demo" class="link-live trigger-demo" data-demo="devdash">
+                    <span>Live Demo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-repo">
+                    <span>GitHub Repo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 2: Quantum Analytics -->
+            <article class="project-card glow-card" id="projectQuantum">
+              <div class="project-image-container">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhq1vwh6oz8dLsIyipqy7HlLhbaqRr_C8LUXZ4xObChOqHkbL9BFFuwLmLwlEtIUaeODpDvLcE7tVLPgjcNDCK9rnhR-5RuwwI5rTIsyin0YUuK1qW786IwLhFdyxVp8TEC8yGND9twg3P5OJeYeK0UhbDaeScniJ-gC1RQrctdMQK_oPkLHzZsrI2CQVk1F3XRBC-6U3LPZZUH-xxGHHhDhR1uI1XT06dbZZGMXxWijEKH8QPpR4"
+                  alt="Quantum Analytics Landing Page"
+                  class="project-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Quantum Analytics</h3>
+                <p class="project-desc">A sleek, corporate landing page focused on pristine typography, fluid responsive behavior, and cross-device consistency.</p>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">AOS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#live-demo" class="link-live trigger-demo" data-demo="quantum">
+                    <span>Live Demo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-repo">
+                    <span>GitHub Repo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 3: Maintenance Case Study: Code Refactor -->
+            <article class="project-card glow-card" id="projectCaseStudy">
+              <div class="project-image-container">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSrPz-39fSXX1sDXUk_xScXqnqocBXNe9ump7lqldJLhfVkWhFm3x0bXQToQQAGifOmCwnPoq0wAZcR83O4FaXWt505pZflYxDvBjWmZXrkZp_iWXXrhdEgGveu8DDdps7lEE_-RaizLUYFE7d2cZNAT6GnRtWsr3Juud69LFFfTDE_UFvicdr8a0waeFMMhcWWiylZaJrX-o0Cj1mRtdjALSYzSdik1avKeYJ5pC2LtMapc_O9EI"
+                  alt="Code Refactor Before and After Comparison"
+                  class="project-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Maintenance Case Study: Code Refactor</h3>
+                <p class="project-desc">Detailed analysis of transforming legacy spaghetti code into a modular, performant architecture, reducing load time by 40%.</p>
+                <div class="project-tags">
+                  <span class="project-tag">JS</span>
+                  <span class="project-tag">Debugging</span>
+                  <span class="project-tag">Perf</span>
+                </div>
+                <div class="project-links">
+                  <a href="#case-study" class="link-live" data-open-modal="caseStudyModal">
+                    <span>Read Case Study</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-underline"></div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info-card">
+              <div class="contact-badge">
+                <span class="status-dot"></span>
+                <span>Available for Projects &amp; Maintenance</span>
+              </div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: #f8fafc;">Let's build or optimize your web presence</h3>
+              <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">
+                Whether you need a new responsive frontend built from scratch, ongoing website maintenance, or diagnosing and fixing elusive layout and JavaScript bugs, I'm here to help.
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px; color: #f8fafc;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span style="font-family: var(--font-mono); font-size: 0.9rem;">sairahirum@gmail.com</span>
+                  <button class="btn-copy-email" style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #10b981; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; margin-left: auto;">
+                    Copy Email
+                  </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px; color: #f8fafc;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span style="font-size: 0.9rem; color: #94a3b8;">Pakistan (Remote Worldwide)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/maeybbwv" method="POST" class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name *</label>
+                <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Sarah Connor" required />
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Email Address *</label>
+               <input type="email" id="senderEmail" name="email" class="form-input" placeholder="e.g. sarah@company.com" required /> 
+
+              <div class="form-group">
+                <label for="projectType" class="form-label">Project or Service Needed</label>
+                <select id="projectType" class="form-select">
+                  <option value="frontend">Custom Frontend Development</option>
+                  <option value="maintenance">Website Maintenance &amp; Bug Fixing</option>
+                  <option value="performance">Speed &amp; Performance Optimization</option>
+                  <option value="updates">Content &amp; UI Feature Updates</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Message *</label>
+                <textarea id="senderMessage" name="message" class="form-input" placeholder="Describe your project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 6px;">
+                <span>Send Message</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <a href="#home" class="footer-brand">DevPortfolio</a>
+        <div class="footer-copy">
+          &copy; 2024 Developer Portfolio. Built with Precision.
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+          <a href="sairahirum@gmail.com" class="footer-link btn-copy-email">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- 1. Case Study Modal (Code Refactor) -->
+    <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="caseStudyTitle">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 class="modal-title" id="caseStudyTitle">Maintenance Case Study: Spaghetti Code Refactor</h3>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+            A deep-dive investigation into a legacy e-commerce discount engine with multiple race conditions, synchronous blocking calculations, and unhandled NaN state conversions.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+            <div style="background:#0f172a; border:1px solid #334155; padding:12px; border-radius:8px; text-align:center;">
+              <div style="font-size:0.75rem; color:#94a3b8;">Page Load Speed</div>
+              <div style="font-size:1.25rem; font-weight:700; color:#10b981;">-40% (0.9s)</div>
+            </div>
+            <div style="background:#0f172a; border:1px solid #334155; padding:12px; border-radius:8px; text-align:center;">
+              <div style="font-size:0.75rem; color:#94a3b8;">CLS Layout Shift</div>
+              <div style="font-size:1.25rem; font-weight:700; color:#10b981;">0.01 (Near Zero)</div>
+            </div>
+            <div style="background:#0f172a; border:1px solid #334155; padding:12px; border-radius:8px; text-align:center;">
+              <div style="font-size:0.75rem; color:#94a3b8;">Bug Resolution</div>
+              <div style="font-size:1.25rem; font-weight:700; color:#10b981;">100% Fixed</div>
+            </div>
+          </div>
+
+          <h4 style="font-size: 1.1rem; color: #f8fafc; margin-bottom: 10px;">Before vs After Code Inspection</h4>
+          <div class="diff-container">
+            <div class="diff-box bad">
+              <div class="diff-header bad">❌ BEFORE (BUGGED CODE)</div>
+              <pre style="color: #fca5a5; overflow-x:auto;"><code>// Unscoped global calculation
+let total = price * quantity;
+if (quantity &gt;= 10 &amp;&amp; price &gt; 50) {
+  total = total * 0.9;
+}
+return total;
+
+// BUG: Incorrect discount logic
+const order = calc(100, 5);
+// total should be 500, but is 500?
+// Missing edge cases &amp; NaN guards!</code></pre>
+            </div>
+
+            <div class="diff-box good">
+              <div class="diff-header good">✅ AFTER (FIXED &amp; MODULAR)</div>
+              <pre style="color: #6ee7b7; overflow-x:auto;"><code>// Pure, pure immutable helper
+function calcDiscount(price, qty, disc = 0.1) {
+  if (qty &lt;= 0 || price &lt;= 0) return 0;
+  const base = price * qty;
+  const isEligible = qty &gt;= 10 &amp;&amp; price &gt; 50;
+  return isEligible ? base * (1 - disc) : base;
+}
+
+// Correctly handles orders &amp; discounts</code></pre>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; text-align: right;">
+            <button class="btn-primary" data-close-modal="caseStudyModal">Done Reviewing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Demo Modal (Live Component Test) -->
+    <div class="modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 class="modal-title" id="demoModalTitle">Project Live Demo</h3>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body" id="demoContainer">
+          <!-- Dynamically populated by script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Resume Modal -->
+    <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+      <div class="modal-box" style="max-width: 800px;">
+        <div class="modal-header">
+          <h3 class="modal-title" id="resumeTitle">sairah irum — Curriculum Vitae</h3>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div style="border-bottom: 1px solid #334155; padding-bottom: 16px; margin-bottom: 20px;">
+            <h2 style="font-size: 1.6rem; color: #10b981; font-weight: 800;">sairah irum</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem;">Frontend Web Developer &amp; Website Maintenance Specialist | San Francisco, CA</p>
+            <p style="color: #64748b; font-size: 0.85rem; font-family: var(--font-mono); margin-top: 4px;">sairahirum@gmail.com | </p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h4 style="color: #10b981; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">PROFESSIONAL SUMMARY</h4>
+            <p style="color: #e2e8f0; font-size: 0.92rem; line-height: 1.6;">
+              Experienced Frontend Engineer specializing in high-performance web development, cross-browser compatibility debugging, performance tuning (Core Web Vitals), and ongoing website maintenance for modern and legacy web applications.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h4 style="color: #10b981; font-size: 1.05rem; font-weight: 700; margin-bottom: 12px;">EXPERIENCE</h4>
+            
+            <div style="margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; font-weight: 600; color: #f8fafc;">
+                <span>Senior Frontend Maintenance &amp; Web Developer</span>
+                <span style="color: #94a3b8; font-size: 0.85rem;">2022 — Present</span>
+              </div>
+              <div style="color: #10b981; font-size: 0.85rem; margin-bottom: 6px;">Apex Digital Solutions</div>
+              <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-left: 20px;">
+                <li>Maintained 25+ client portals with zero unscheduled downtime.</li>
+                <li>Reduced average Largest Contentful Paint (LCP) by 42% across corporate websites.</li>
+                <li>Built custom responsive components in semantic HTML5, CSS3, and modern JavaScript.</li>
+              </ul>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; font-weight: 600; color: #f8fafc;">
+                <span>Frontend Web Developer</span>
+                <span style="color: #94a3b8; font-size: 0.85rem;">2020 — 2022</span>
+              </div>
+              <div style="color: #10b981; font-size: 0.85rem; margin-bottom: 6px;">Quantum Labs Studio</div>
+              <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-left: 20px;">
+                <li>Designed corporate landing pages, interactive dashboards, and accessibility enhancements.</li>
+                <li>Conducted responsive audits ensuring smooth UX on mobile, tablet, and ultra-wide screens.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <h4 style="color: #10b981; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">CORE SKILLS</h4>
+            <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">
+              <strong>Languages &amp; Runtimes:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, Node.js<br />
+              <strong>Tools &amp; Workflow:</strong> Git &amp; GitHub, VS Code, Chrome DevTools, Lighthouse, Webpack, Vite, NPM<br />
+              <strong>Specialties:</strong> Core Web Vitals Optimization, Responsive Web Design, Layout Shift Fixing, UI/UX Maintenance
+            </p>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid #334155; padding-top: 18px;">
+            <button class="btn-outline" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Print / Save PDF</span>
+            </button>
+            <button class="btn-primary" data-close-modal="resumeModal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Linked JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
